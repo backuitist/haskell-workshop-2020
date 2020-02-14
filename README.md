@@ -2,13 +2,34 @@
 
 ## Goals
 
-* Build a simple CRUD REST API backed by a Postgresql DB
-* Discover the haskell ecosystem
+* Build a simple Hello world using Nix
+* What is Nix?
 
 ## Requirements
 
-* VSCode
+* Nix
 
-## Where to start
+See https://nixos.org/nix/download.html
+```
+curl https://nixos.org/nix/install | sh
+```
 
-`git checkout 01-nix`
+## Let's start - GHCI
+
+* `nix-shell`
+* `ghci`
+
+You should be in a haskell REPL
+* print hello: `putStrLn "Hej hej!"`
+* simple arithmetic: `1 + 2`
+
+Leave the REPL
+
+## We'll now build a haskell program
+
+* `nix-build`
+* and run the result of the build
+
+## What's next
+
+`git checkout 02-rest-api`
