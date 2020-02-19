@@ -25,10 +25,19 @@ You should be in a haskell REPL
 
 Leave the REPL
 
-## We'll now build a haskell program
+## Take it further, create a proper program
+
+* In a separate window run VSCode and open `src/Main.hs`
+* Then from the nix shell, run `cabal repl`
+* In the GHC REPL, run the main function `main`
+* Modify `src/Main.hs` and save
+* From the REPL enter `:r`
+
+
+## and produce a binary
 
 * `nix-build`
-* and run the result of the build
+* and run the result of the build: `result/bin/hej-hej`
 
 ## What's next
 
