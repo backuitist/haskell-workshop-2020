@@ -1,1 +1,2 @@
-import ./. { forShell = true; }
+{withPgCli ? false}:
+import ./. { inherit withPgCli; forShell = true; }
