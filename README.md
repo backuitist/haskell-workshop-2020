@@ -1,44 +1,23 @@
-# Haskell Workshop 2020
+# Haskell Workshop 2020 - Part 2, REST API
 
 ## Goals
 
-* Build a simple Hello world using Nix
-* What is Nix?
+* Build a simple JSON REST endpoint
+* Learn about some haskell libs:
+  * Aeson: JSON serialization [1],[2]
+  * Scotty: simple (and almost dead!) web framework [3]
+* Our first GHC extension
 
-## Requirements
-
-* Nix
-
-See https://nixos.org/nix/download.html
-```
-curl https://nixos.org/nix/install | sh
-```
-
-## Let's start - GHCI
+## Let's try it
 
 * `nix-shell`
-* `ghci`
+* `cabal repl`
+* `main` will bind the http server on port 3000
+* `curl -v localhost:3000/bob-the-sponge`
+* finally a little benchmark `wrk -t4 -c50 -d5s http://localhost:3000`
 
-You should be in a haskell REPL
-* print hello: `putStrLn "Hej hej!"`
-* simple arithmetic: `1 + 2`
+## References
 
-Leave the REPL
-
-## Take it further, create a proper program
-
-* In a separate window run VSCode and open `src/Main.hs`
-* Then from the nix shell, run `cabal repl`
-* In the GHC REPL, run the main function `main`
-* Modify `src/Main.hs` and save
-* From the REPL enter `:r`
-
-
-## and produce a binary
-
-* `nix-build`
-* and run the result of the build: `result/bin/hej-hej`
-
-## What's next
-
-`git checkout 02-rest-api`
+* [1] Aeson - https://hackage.haskell.org/package/aeson
+* [2] Aeson tutorial - https://artyom.me/aeson
+* [3] Scotty - https://hackage.haskell.org/package/scotty
