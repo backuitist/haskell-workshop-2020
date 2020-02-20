@@ -11,8 +11,12 @@
 
 * You'll need the Haskell Language Server VSCode extension
 * VSCode needs to be started from within the nix shell (we'll provide the right HIE version with Nix):
-  * `nix-shell`
+  * `./shell.sh` -- this scripts add another binary cache for HIE so that you don't end-up building haskell libraries forever!
   * `code -n .`
+
+For mac users: if you see warnings like "you're not a trusted user", this means you have nix running as a daemon,
+and you need to add yourself as a trusted user. Find you nix.conf (should be in /etc) and append this line:
+`trusted-users = <your username>`.
 
 ## Let's try it
 
