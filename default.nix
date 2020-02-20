@@ -1,8 +1,8 @@
-{ pkgs ? import <nixpkgs> {},
-  ghcVersion ? "ghc865",
+{ ghcVersion ? "ghc865",
   forShell ? false,
   withPgCli ? false }:
 let   
+  pkgs = import ./nixpkgs.nix;
   hPkgs = pkgs.haskell.packages."${ghcVersion}";
   hie = import ./hie.nix { inherit ghcVersion; };
   restApi = hPkgs.callCabal2nix "project" ./. {};
