@@ -16,6 +16,13 @@
 * `curl -v localhost:3000/bob-the-sponge`
 * finally a little benchmark `wrk -t4 -c50 -d5s http://localhost:3000`
 
+## What's next
+
+`git checkout 03-crud-rest-api`
+
+Or visit https://github.com/backuitist/haskell-workshop-2020/tree/03-crud-rest-api
+
+
 ## References
 
 * [1] Aeson - https://hackage.haskell.org/package/aeson
