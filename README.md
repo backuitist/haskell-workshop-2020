@@ -14,6 +14,13 @@ See https://nixos.org/nix/download.html
 curl https://nixos.org/nix/install | sh
 ```
 
+### For mac users
+
+If you can't write to `/nix` you'll have to create a new volume (run the Disk utility program).
+
+Then follow these instructions: https://gist.github.com/dzajkowski/2d8469a2808f326b66ffac08a0b61f9c
+to create a “synthetic” /nix directory.
+
 ## Let's start - GHCI
 
 * `nix-shell`
